@@ -1,4 +1,3 @@
-"use strict";
 /* 布尔值 */
 let isDone = false;
 let createdByNewBoolean = new Boolean(1);
@@ -18,13 +17,32 @@ let myAge = 20;
 //模板字符串
 let sentence = `Hello, my name is ${myName},
 I'll be ${myAge + 1} years old next month`;
-/* 空值 */
+/* 空值 */
 function logName() {
     console.log('my name is bob');
 }
 // Declaring variables of type void is not useful 
 // because you can only assign null (only if --strictNullChecks is not specified, see next section) or undefined to them:
 let unusable = undefined;
+let unusable_null = null;
 /* null & undefined */
 let u = undefined;
 let n = null;
+let num = undefined;
+let u_1;
+let num_1 = u_1;
+/* 任意值 any */
+let any_name = undefined;
+let any_name1 = 3;
+let any_name2 = 'undefined';
+let any_name3 = false;
+let any_name4 = null;
+any_name3 = 1000;
+//在任意值上访问任何属性都是允许的,也允许调用任何方法：
+let anything = 'hello';
+console.log(anything.nyName);
+console.log(anything.nyName.myFirstName);
+let anyThing = 'Tom';
+anyThing.setName('Jerry');
+anyThing.setName('Jerry').sayHello();
+anyThing.myName.setFirstName('Cat');

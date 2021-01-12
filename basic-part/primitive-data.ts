@@ -30,7 +30,7 @@ let myAge: number = 20;
 let sentence: string = `Hello, my name is ${myName},
 I'll be ${myAge + 1} years old next month`;
 
-/* 空值 */
+/* 空值 */
 function logName(): void {
   console.log('my name is bob');
 }
@@ -39,7 +39,31 @@ function logName(): void {
 // because you can only assign null (only if --strictNullChecks is not specified, see next section) or undefined to them:
 
 let unusable: void = undefined;
+let unusable_null: void = null;
 
 /* null & undefined */
 let u: undefined = undefined;
 let n: null = null;
+
+let num: number = undefined;
+
+let u_1: undefined;
+let num_1: number = u_1;
+
+/* 任意值 any */
+let any_name: any = undefined;
+let any_name1: any = 3;
+let any_name2: any = 'undefined';
+let any_name3: any = false;
+let any_name4: any = null;
+any_name3 = 1000;
+
+//在任意值上访问任何属性都是允许的,也允许调用任何方法：
+let anything: any = 'hello';
+console.log(anything.nyName);
+console.log(anything.nyName.myFirstName);
+
+let anyThing: any = 'Tom';
+anyThing.setName('Jerry');
+anyThing.setName('Jerry').sayHello();
+anyThing.myName.setFirstName('Cat');
