@@ -67,3 +67,32 @@ let anyThing: any = 'Tom';
 anyThing.setName('Jerry');
 anyThing.setName('Jerry').sayHello();
 anyThing.myName.setFirstName('Cat');
+
+let something; //等价于 let something: any;
+something = 'seven';
+something = 7;
+something.setName('Tom');
+
+/* never */
+function error(message: string): never {
+  throw new Error(message);
+}
+
+function infiniteLoop(): never {
+  while(true) {}
+}
+
+/* Unknown */
+let uk: unknown = 2;
+uk = 'two';
+console.log((uk as {name: string}).name)
+
+/* Array */
+let list: number[] = [1, 2, 3];
+let list_2: Array<number> = [1, 2, 3];
+
+/* Tuple */
+let tu: [string, number] = ['tom', 20];
+tu.push(100)
+console.log(tu[0].length)
+// console.log(tu[1].length) //Property 'length' does not exist on type 'number'.
