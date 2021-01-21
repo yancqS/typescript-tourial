@@ -31,25 +31,25 @@ let n = null;
 let num = undefined;
 let u_1;
 let num_1 = u_1;
-/* 任意值 any */
-let any_name = undefined;
-let any_name1 = 3;
-let any_name2 = 'undefined';
-let any_name3 = false;
-let any_name4 = null;
-any_name3 = 1000;
-//在任意值上访问任何属性都是允许的,也允许调用任何方法：
-let anything = 'hello';
-console.log(anything.nyName);
-console.log(anything.nyName.myFirstName);
-let anyThing = 'Tom';
-anyThing.setName('Jerry');
-anyThing.setName('Jerry').sayHello();
-anyThing.myName.setFirstName('Cat');
-let something; //等价于 let something: any;
-something = 'seven';
-something = 7;
-something.setName('Tom');
+// /* 任意值 any */
+// let any_name: any = undefined;
+// let any_name1: any = 3;
+// let any_name2: any = 'undefined';
+// let any_name3: any = false;
+// let any_name4: any = null;
+// any_name3 = 1000;
+// //在任意值上访问任何属性都是允许的,也允许调用任何方法：
+// let anything: any = 'hello';
+// console.log(anything.nyName);
+// console.log(anything.nyName.myFirstName);
+// let anyThing: any = 'Tom';
+// anyThing.setName('Jerry');
+// anyThing.setName('Jerry').sayHello();
+// anyThing.myName.setFirstName('Cat');
+// let something; //等价于 let something: any;
+// something = 'seven';
+// something = 7;
+// something.setName('Tom');
 /* never */
 function error(message) {
     throw new Error(message);
@@ -69,3 +69,11 @@ let tu = ['tom', 20];
 tu.push(100);
 console.log(tu[0].length);
 // console.log(tu[1].length) //Property 'length' does not exist on type 'number'.
+/* Enum 枚举类型 */
+var Color;
+(function (Color) {
+    Color[Color["Red"] = -1] = "Red";
+    Color[Color["Green"] = 1.2] = "Green";
+    Color[Color["Blue"] = 2.2] = "Blue";
+})(Color || (Color = {}));
+console.log(Color[2.2]);

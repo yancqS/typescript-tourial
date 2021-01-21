@@ -20,17 +20,14 @@ declare let n: null;
 declare let num: number;
 declare let u_1: undefined;
 declare let num_1: number;
-declare let any_name: any;
-declare let any_name1: any;
-declare let any_name2: any;
-declare let any_name3: any;
-declare let any_name4: any;
-declare let anything: any;
-declare let anyThing: any;
-declare let something: any;
 declare function error(message: string): never;
 declare function infiniteLoop(): never;
 declare let uk: unknown;
 declare let list: number[];
 declare let list_2: Array<number>;
 declare let tu: [string, number];
+declare enum Color {
+    Red = -1,
+    Green = 1.2,
+    Blue = 2.2
+}
