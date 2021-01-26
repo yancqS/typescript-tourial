@@ -26,8 +26,40 @@ declare let uk: unknown;
 declare let list: number[];
 declare let list_2: Array<number>;
 declare let tu: [string, number];
-declare enum Color {
-    Red = -1,
-    Green = 1.2,
-    Blue = 2.2
+declare enum Days {
+    Sun = 3,
+    Mon = 1,
+    Tue = 2,
+    Wed = 3,
+    Thu = 4,
+    Fri = 5,
+    Sat = 6
+}
+declare enum Days_1 {
+    Sun = 3,
+    Mon = 1,
+    Tue = 2,
+    Wed = 3,
+    Thu,
+    Fri,
+    Sat
+}
+declare enum Days_2 {
+    Sun = 7,
+    Mon = 1.5,
+    Tue = 2.5,
+    Wed = 3.5,
+    Thu = 4.5,
+    Fri = 5.5,
+    Sat = 6.5
+}
+declare const _num = 10;
+declare enum Days_3 {
+    Sun = 8,
+    Mon = 12,
+    Tue = 13,
+    Wed = 14,
+    Thu = 15,
+    Fri = 16,
+    Sat
 }

@@ -69,11 +69,54 @@ let tu = ['tom', 20];
 tu.push(100);
 console.log(tu[0].length);
 // console.log(tu[1].length) //Property 'length' does not exist on type 'number'.
+// tu.push(true);
+//Argument of type 'true' is not assignable to parameter of type 'string | number'.
 /* Enum 枚举类型 */
-var Color;
-(function (Color) {
-    Color[Color["Red"] = -1] = "Red";
-    Color[Color["Green"] = 1.2] = "Green";
-    Color[Color["Blue"] = 2.2] = "Blue";
-})(Color || (Color = {}));
-console.log(Color[2.2]);
+var Days;
+(function (Days) {
+    Days[Days["Sun"] = 3] = "Sun";
+    Days[Days["Mon"] = 1] = "Mon";
+    Days[Days["Tue"] = 2] = "Tue";
+    Days[Days["Wed"] = 3] = "Wed";
+    Days[Days["Thu"] = 4] = "Thu";
+    Days[Days["Fri"] = 5] = "Fri";
+    Days[Days["Sat"] = 6] = "Sat";
+})(Days || (Days = {}));
+;
+console.log(Days['Sun']);
+console.log(Days['Wed']);
+var Days_1;
+(function (Days_1) {
+    Days_1[Days_1["Sun"] = 3] = "Sun";
+    Days_1[Days_1["Mon"] = 1] = "Mon";
+    Days_1[Days_1["Tue"] = 2] = "Tue";
+    Days_1[Days_1["Wed"] = 3] = "Wed";
+    Days_1[Days_1["Thu"] = 's'] = "Thu";
+    Days_1[Days_1["Fri"] = 'd'] = "Fri";
+    Days_1[Days_1["Sat"] = 'f'] = "Sat";
+})(Days_1 || (Days_1 = {}));
+;
+var Days_2;
+(function (Days_2) {
+    Days_2[Days_2["Sun"] = 7] = "Sun";
+    Days_2[Days_2["Mon"] = 1.5] = "Mon";
+    Days_2[Days_2["Tue"] = 2.5] = "Tue";
+    Days_2[Days_2["Wed"] = 3.5] = "Wed";
+    Days_2[Days_2["Thu"] = 4.5] = "Thu";
+    Days_2[Days_2["Fri"] = 5.5] = "Fri";
+    Days_2[Days_2["Sat"] = 6.5] = "Sat";
+})(Days_2 || (Days_2 = {}));
+;
+const _num = 10;
+var Days_3;
+(function (Days_3) {
+    Days_3[Days_3["Sun"] = 8] = "Sun";
+    Days_3[Days_3["Mon"] = 12] = "Mon";
+    Days_3[Days_3["Tue"] = 13] = "Tue";
+    Days_3[Days_3["Wed"] = 14] = "Wed";
+    Days_3[Days_3["Thu"] = 15] = "Thu";
+    Days_3[Days_3["Fri"] = 16] = "Fri";
+    Days_3[Days_3["Sat"] = 'blue'.length] = "Sat";
+})(Days_3 || (Days_3 = {}));
+;
+console.log(Days_3[4]); //Sat

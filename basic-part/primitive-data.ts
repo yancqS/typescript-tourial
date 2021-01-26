@@ -97,6 +97,22 @@ tu.push(100)
 console.log(tu[0].length)
 // console.log(tu[1].length) //Property 'length' does not exist on type 'number'.
 
+// tu.push(true);
+//Argument of type 'true' is not assignable to parameter of type 'string | number'.
+
 /* Enum 枚举类型 */
-enum Color {Red = -1, Green = 1.2, Blue}
-console.log(Color[2.2]);
+enum Days {Sun = 3, Mon = 1, Tue, Wed, Thu, Fri, Sat};
+
+console.log(Days['Sun']);
+console.log(Days['Wed']);
+
+
+enum Days_1 {Sun = 3, Mon = 1, Tue, Wed, Thu = <any>'s', Fri = <any>'d', Sat = <any>'f'};
+
+enum Days_2 {Sun = 7, Mon = 1.5, Tue, Wed, Thu, Fri, Sat};
+
+const _num = 10;
+
+enum Days_3 {Sun = 1 << 3, Mon = Sun | 1 << 2, Tue, Wed, Thu, Fri, Sat = 'blue'.length};
+
+console.log(Days_3[4]); //Sat
