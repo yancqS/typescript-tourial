@@ -116,3 +116,5 @@ const _num = 10;
 enum Days_3 {Sun = 1 << 3, Mon = Sun | 1 << 2, Tue, Wed, Thu, Fri, Sat = 'blue'.length};
 
 console.log(Days_3[4]); //Sat
+
+/* test */
