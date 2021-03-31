@@ -50,28 +50,32 @@ let num: number = undefined;
 let u_1: undefined;
 let num_1: number = u_1;
 
-// /* 任意值 any */
-// let any_name: any = undefined;
-// let any_name1: any = 3;
-// let any_name2: any = 'undefined';
-// let any_name3: any = false;
-// let any_name4: any = null;
-// any_name3 = 1000;
+/* === 如果在index.html中调用编译后的js文件，请 注释 「==」 之间的代码 === */
 
-// //在任意值上访问任何属性都是允许的,也允许调用任何方法：
-// let anything: any = 'hello';
-// console.log(anything.nyName);
-// console.log(anything.nyName.myFirstName);
+/* 任意值 any */
+let any_name: any = undefined;
+let any_name1: any = 3;
+let any_name2: any = 'undefined';
+let any_name3: any = false;
+let any_name4: any = null;
+any_name3 = 1000;
 
-// let anyThing: any = 'Tom';
-// anyThing.setName('Jerry');
-// anyThing.setName('Jerry').sayHello();
-// anyThing.myName.setFirstName('Cat');
+//在任意值上访问任何属性都是允许的,也允许调用任何方法：
+let anything: any = 'hello';
+console.log(anything.nyName);
+console.log(anything.nyName.myFirstName);
 
-// let something; //等价于 let something: any;
-// something = 'seven';
-// something = 7;
-// something.setName('Tom');
+let anyThing: any = 'Tom';
+anyThing.setName('Jerry');
+anyThing.setName('Jerry').sayHello();
+anyThing.myName.setFirstName('Cat');
+
+let something; //等价于 let something: any;
+something = 'seven';
+something = 7;
+something.setName('Tom');
+
+/* === 如果在index.html中调用编译后的js文件，请 注释 「==」 之间的代码 END=== */
 
 /* never */
 function error(message: string): never {
@@ -116,5 +120,3 @@ const _num = 10;
 enum Days_3 {Sun = 1 << 3, Mon = Sun | 1 << 2, Tue, Wed, Thu, Fri, Sat = 'blue'.length};
 
 console.log(Days_3[4]); //Sat
-
-/* test */
